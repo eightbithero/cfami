@@ -109,7 +109,7 @@ Current file: hello.s
 000000r 1               	.dbg		file, "/opt/homebrew/Cellar/cc65/2.19/share/cc65/include/stddef.h", 3057, 1590865395
 000000r 1               	.dbg		file, "/opt/homebrew/Cellar/cc65/2.19/share/cc65/include/stdio.h", 6189, 1590865395
 000000r 1               	.dbg		file, "/opt/homebrew/Cellar/cc65/2.19/share/cc65/include/stdarg.h", 2913, 1590865395
-000000r 1               	.dbg		file, "vrambuf.h", 1036, 1704629370
+000000r 1               	.dbg		file, "vrambuf.h", 1133, 1704644197
 000000r 1               	.forceimport	__STARTUP__
 000000r 1               	.dbg		sym, "pal_col", "00", extern, "_pal_col"
 000000r 1               	.dbg		sym, "ppu_on_all", "00", extern, "_ppu_on_all"

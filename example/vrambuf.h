@@ -8,12 +8,8 @@
 #define VBUFSIZE 128
 
 // update buffer starts at $100 (stack page)
-// вот это нихера не находится в отладке что этот адрес занят, говнище полное
-// #define updbuf ((byte*)0x100)
-#pragma rodata-name ("MYDATA")
-unsigned char myBuffer[VBUFSIZE] @ 0x100;
-#pragma rodata-name ()
-
+// вот это не находится в отладке что этот адрес занят
+#define updbuf ((byte*)0x100)
 
 // index to end of buffer
 extern byte updptr;
