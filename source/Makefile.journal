@@ -1,0 +1,68 @@
+CC = cc65
+CA = ca65
+LD = ld65
+
+TARGETS := hello.nes
+
+EMULATOR ?= higan
+
+EXAMPLES := $(TARGETS:..nes=)
+OBJECTS := $(TARGETS:.nes=.o)
+ASSEMBLY_SOURCES := $(TARGETS:.nes=.s)
+C_SOURCES := $(TARGETS:.nes=.c)
+
+.PHONY: all
+
+# Disable builtin rules (for .c, .o) by providing an empty .SUFFIXES rule
+# Yes. GNU make is a rat's nest
+.SUFFIXES:
+
+# Make sure intermediate files are *NOT* deleted
+# Yes. GNU make is a rat's nest
+.PRECIOUS: %.s %.o
+
+all: $(TARGETS)
+
+%: %.nes
+	$(EMULATOR) $<
+
+clean:
+	@rm -fv $(TARGETS)
+	@rm -fv $(OBJECTS)
+	@rm -fv $(ASSEMBLY_SOURCES)
+
+%.s: %.c
+	echo "step 1"
+	$(CC) -Oi $< --target nes --add-source
+
+%.o: %.s
+	echo "step 2"
+	$(CA) $<
+
+%.nes: %.o crt0.o
+	echo "step 3"
+	$(LD) -C nrom_128_horz.cfg -o $@ $^ neslib.lib
+
+
+# cc65  -Oi hello.c --target nes -I/opt/homebrew/include/ --add-source
+# cc65  -Oi hello.c --target nes --add-source
+# ca65 hello.s
+# ca65 chr_generic.s
+# ld65 -t nes chr_generic.o hello.o crt0.o runtime.lib 
+
+
+
+cc65 -Oi hello.c --target nes -I/Users/lmaxim/Downloads/cc65-nes-examples/include/ --add-source
+ca65 hello.s
+ca65 crt0.s # тут оказалось надо тащить все зависимости ))) сорри
+ld65 -C nrom_128_horz.cfg -o hello.nes hello.o crt0.o nes.lib
+
+
+chr_generic.s
+tileset.chr
+
+Работает /Users/lmaxim/Downloads/cc65-nes-examples
+
+cc65 -Oi hello.c --target nes --add-source
+ca65 hello.s
+ld65 -C nrom_128_horz.cfg -o hello.nes hello.o crt0.o nes.lib

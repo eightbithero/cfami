@@ -1,0 +1,451 @@
+Modules list:
+-------------
+hello.o:
+    CODE              Offs=000000  Size=000114  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=000008  Align=00001  Fill=0000
+crt0.o:
+    ZEROPAGE          Offs=000000  Size=000022  Align=00001  Fill=0000
+    HEADER            Offs=000000  Size=000010  Align=00001  Fill=0000
+    STARTUP           Offs=000000  Size=0004F4  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+chr_generic.o:
+    CHARS             Offs=000000  Size=001000  Align=00001  Fill=0000
+vrambuf.o:
+    CODE              Offs=000114  Size=000089  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000001  Align=00001  Fill=0000
+neslib2.lib(pusha.o):
+    CODE              Offs=00019D  Size=000016  Align=00001  Fill=0000
+nes.lib(_directerrno.o):
+    CODE              Offs=0001B3  Size=00000A  Align=00001  Fill=0000
+nes.lib(_hextab.o):
+    RODATA            Offs=000008  Size=000010  Align=00001  Fill=0000
+nes.lib(_longminstr.o):
+    RODATA            Offs=000018  Size=00000C  Align=00001  Fill=0000
+nes.lib(_oserror.o):
+    BSS               Offs=000000  Size=000001  Align=00001  Fill=0000
+nes.lib(_printf.o):
+    CODE              Offs=0001BD  Size=0003A5  Align=00001  Fill=0000
+    BSS               Offs=000001  Size=00002B  Align=00001  Fill=0000
+    DATA              Offs=000001  Size=000003  Align=00001  Fill=0000
+nes.lib(_seterrno.o):
+    CODE              Offs=000562  Size=000009  Align=00001  Fill=0000
+nes.lib(addysp.o):
+    CODE              Offs=00056B  Size=00000E  Align=00001  Fill=0000
+nes.lib(aslax4.o):
+    CODE              Offs=000579  Size=000011  Align=00001  Fill=0000
+nes.lib(axlong.o):
+    CODE              Offs=00058A  Size=00000D  Align=00001  Fill=0000
+nes.lib(condes.o):
+    CODE              Offs=000597  Size=00000C  Align=00001  Fill=0000
+    DATA              Offs=000004  Size=000025  Align=00001  Fill=0000
+    ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
+nes.lib(copydata.o):
+    CODE              Offs=0005A3  Size=00002D  Align=00001  Fill=0000
+nes.lib(ctype.o):
+    RODATA            Offs=000024  Size=00008B  Align=00001  Fill=0000
+nes.lib(ctypemask.o):
+    CODE              Offs=0005D0  Size=00001E  Align=00001  Fill=0000
+nes.lib(decsp4.o):
+    CODE              Offs=0005EE  Size=00000D  Align=00001  Fill=0000
+nes.lib(decsp6.o):
+    CODE              Offs=0005FB  Size=00000D  Align=00001  Fill=0000
+nes.lib(errno.o):
+    BSS               Offs=00002C  Size=000002  Align=00001  Fill=0000
+nes.lib(incsp2.o):
+    CODE              Offs=000608  Size=000016  Align=00001  Fill=0000
+nes.lib(incsp5.o):
+    CODE              Offs=00061E  Size=000005  Align=00001  Fill=0000
+nes.lib(incsp6.o):
+    CODE              Offs=000623  Size=000005  Align=00001  Fill=0000
+nes.lib(ldaxsp.o):
+    CODE              Offs=000628  Size=000009  Align=00001  Fill=0000
+nes.lib(lneg.o):
+    CODE              Offs=000631  Size=00001E  Align=00001  Fill=0000
+nes.lib(lpush.o):
+    CODE              Offs=00064F  Size=000021  Align=00001  Fill=0000
+nes.lib(ltoa.o):
+    CODE              Offs=000670  Size=000095  Align=00001  Fill=0000
+nes.lib(memcpy.o):
+    CODE              Offs=000705  Size=00003C  Align=00001  Fill=0000
+nes.lib(mod.o):
+    CODE              Offs=000741  Size=000011  Align=00001  Fill=0000
+nes.lib(negabs.o):
+    CODE              Offs=000752  Size=000012  Align=00001  Fill=0000
+nes.lib(popa.o):
+    CODE              Offs=000764  Size=00000C  Align=00001  Fill=0000
+nes.lib(popptr1.o):
+    CODE              Offs=000770  Size=00000E  Align=00001  Fill=0000
+nes.lib(push1.o):
+    CODE              Offs=00077E  Size=000005  Align=00001  Fill=0000
+nes.lib(pushax.o):
+    CODE              Offs=000783  Size=00001A  Align=00001  Fill=0000
+nes.lib(pushwsp.o):
+    CODE              Offs=00079D  Size=00001C  Align=00001  Fill=0000
+nes.lib(shelp.o):
+    CODE              Offs=0007B9  Size=000020  Align=00001  Fill=0000
+nes.lib(sprintf.o):
+    CODE              Offs=0007D9  Size=00002B  Align=00001  Fill=0000
+    BSS               Offs=00002E  Size=000001  Align=00001  Fill=0000
+nes.lib(staxsp.o):
+    CODE              Offs=000804  Size=00000B  Align=00001  Fill=0000
+nes.lib(strlen.o):
+    CODE              Offs=00080F  Size=000016  Align=00001  Fill=0000
+nes.lib(strlower.o):
+    CODE              Offs=000825  Size=000027  Align=00001  Fill=0000
+nes.lib(subysp.o):
+    CODE              Offs=00084C  Size=00000D  Align=00001  Fill=0000
+nes.lib(udiv.o):
+    CODE              Offs=000859  Size=00004F  Align=00001  Fill=0000
+nes.lib(vsnprintf.o):
+    CODE              Offs=0008A8  Size=0000DA  Align=00001  Fill=0000
+    DATA              Offs=000029  Size=000008  Align=00001  Fill=0000
+nes.lib(vsprintf.o):
+    CODE              Offs=000982  Size=000012  Align=00001  Fill=0000
+nes.lib(zerobss.o):
+    CODE              Offs=000994  Size=000023  Align=00001  Fill=0000
+nes.lib(zeropage.o):
+    ZEROPAGE          Offs=000022  Size=00001A  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CHARS                 000000  000FFF  001000  00001
+HEADER                000000  00000F  000010  00001
+ZEROPAGE              000000  00003B  00003C  00001
+DATA                  000300  000330  000031  00001
+BSS                   000331  00035F  00002F  00001
+STARTUP               00C000  00C4F3  0004F4  00001
+CODE                  00C4F4  00CEAA  0009B7  00001
+RODATA                00CEAB  00CF59  0000AF  00001
+ONCE                  00CF8B  00CF96  00000C  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+NES_CHR_BANKS             000001 REA    NES_MAPPER                000000 REA    
+NES_MIRRORING             000001 REA    NES_PRG_BANKS             000001 REA    
+__BSS_RUN__               000331 RLA    __BSS_SIZE__              00002F REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00C4F4 RLA    
+__DATA_LOAD__             00CF5A RLA    __DATA_RUN__              000300 RLA    
+__DATA_SIZE__             000031 REA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      00CF5A RLA    __RAM_SIZE__              000500 REA    
+__RAM_START__             000300 RLA    __STARTUP__               000001 REA    
+__ctype                   00CECF RLA    __ctypeidx                00CEDA RLA    
+__directerrno             00C6A7 RLA    __errno                   00035D RLA    
+__hextab                  00CEB3 RLA    __longminstr              00CEC3 RLA    
+__oserror                 000331 RLA    __printf                  00C7A4 RLA    
+__seterrno                00CA56 RLA    _ltoa                     00CB7C RLA    
+_main                     00C5D0 RLA    _memcpy                   00CBF9 RLA    
+_pal_col                  00C23E RLA    _ppu_on_all               00C289 RLA    
+_ppu_wait_frame           00C2DB RLA    _scroll                   00C2FB RLA    
+_set_vram_update          00C376 RLA    _sprintf                  00CCCD RLA    
+_strlen                   00CD03 RLA    _strlower                 00CD19 RLA    
+_ultoa                    00CBBD RLA    _vrambuf_clear            00C611 RLA    
+_vrambuf_put              00C622 RLA    _vsprintf                 00CE76 RLA    
+addysp                    00CA60 RLA    aslax4                    00CA6D RLA    
+axlong                    00CA7E RLA    axulong                   00CA84 RLA    
+copydata                  00CA97 RLA    ctypemaskdirect           00CAC8 RLA    
+decsp4                    00CAE2 RLA    decsp6                    00CAEF RLA    
+incsp2                    00CB04 RLA    incsp5                    00CB12 RLA    
+incsp6                    00CB17 RLA    initlib                   00CF8B RLA    
+ldaxysp                   00CB1E RLA    negax                     00CC4A RLA    
+negeax                    00CB25 RLA    popa                      00CC58 RLA    
+popax                     00CAFC RLA    popptr1                   00CC64 RLA    
+popsargsudiv16            00CCAD RLA    ptr1                      00002A RLZ    
+ptr2                      00002C RLZ    ptr3                      00002E RLZ    
+ptr4                      000030 RLZ    push0                     00CC77 RLA    
+push1                     00CC72 RLA    pusha                     00C695 RLA    
+pusha0                    00CC79 RLA    pushax                    00CC7B RLA    
+pusheax                   00CB4C RLA    pushw0sp                  00CC91 RLA    
+pushwysp                  00CC93 RLA    regbank                   000036 RLZ    
+sp                        000022 RLZ    sreg                      000024 RLZ    
+staxysp                   00CCFA RLA    subysp                    00CD40 RLA    
+tmp1                      000032 RLZ    tmp2                      000033 RLZ    
+tosmoda0                  00CC35 RLA    udiv16                    00CD5E RLA    
+vsnprintf                 00CD9F RLA    zerobss                   00CE88 RLA    
+
+
+
+Exports list by value:
+----------------------
+__DESTRUCTOR_COUNT__      000000 REA    NES_MAPPER                000000 REA    
+__CONSTRUCTOR_COUNT__     000000 REA    NES_PRG_BANKS             000001 REA    
+__STARTUP__               000001 REA    NES_CHR_BANKS             000001 REA    
+NES_MIRRORING             000001 REA    sp                        000022 RLZ    
+sreg                      000024 RLZ    ptr1                      00002A RLZ    
+ptr2                      00002C RLZ    ptr3                      00002E RLZ    
+__BSS_SIZE__              00002F REA    ptr4                      000030 RLZ    
+__DATA_SIZE__             000031 REA    tmp1                      000032 RLZ    
+tmp2                      000033 RLZ    regbank                   000036 RLZ    
+__DATA_RUN__              000300 RLA    __RAM_START__             000300 RLA    
+__oserror                 000331 RLA    __BSS_RUN__               000331 RLA    
+__errno                   00035D RLA    __RAM_SIZE__              000500 REA    
+_pal_col                  00C23E RLA    _ppu_on_all               00C289 RLA    
+_ppu_wait_frame           00C2DB RLA    _scroll                   00C2FB RLA    
+_set_vram_update          00C376 RLA    __CONSTRUCTOR_TABLE__     00C4F4 RLA    
+_main                     00C5D0 RLA    _vrambuf_clear            00C611 RLA    
+_vrambuf_put              00C622 RLA    pusha                     00C695 RLA    
+__directerrno             00C6A7 RLA    __printf                  00C7A4 RLA    
+__seterrno                00CA56 RLA    addysp                    00CA60 RLA    
+aslax4                    00CA6D RLA    axlong                    00CA7E RLA    
+axulong                   00CA84 RLA    copydata                  00CA97 RLA    
+ctypemaskdirect           00CAC8 RLA    decsp4                    00CAE2 RLA    
+decsp6                    00CAEF RLA    popax                     00CAFC RLA    
+incsp2                    00CB04 RLA    incsp5                    00CB12 RLA    
+incsp6                    00CB17 RLA    ldaxysp                   00CB1E RLA    
+negeax                    00CB25 RLA    pusheax                   00CB4C RLA    
+_ltoa                     00CB7C RLA    _ultoa                    00CBBD RLA    
+_memcpy                   00CBF9 RLA    tosmoda0                  00CC35 RLA    
+negax                     00CC4A RLA    popa                      00CC58 RLA    
+popptr1                   00CC64 RLA    push1                     00CC72 RLA    
+push0                     00CC77 RLA    pusha0                    00CC79 RLA    
+pushax                    00CC7B RLA    pushw0sp                  00CC91 RLA    
+pushwysp                  00CC93 RLA    popsargsudiv16            00CCAD RLA    
+_sprintf                  00CCCD RLA    staxysp                   00CCFA RLA    
+_strlen                   00CD03 RLA    _strlower                 00CD19 RLA    
+subysp                    00CD40 RLA    udiv16                    00CD5E RLA    
+vsnprintf                 00CD9F RLA    _vsprintf                 00CE76 RLA    
+zerobss                   00CE88 RLA    __hextab                  00CEB3 RLA    
+__longminstr              00CEC3 RLA    __ctype                   00CECF RLA    
+__ctypeidx                00CEDA RLA    __DATA_LOAD__             00CF5A RLA    
+__DESTRUCTOR_TABLE__      00CF5A RLA    initlib                   00CF8B RLA    
+
+
+
+Imports list:
+-------------
+NES_CHR_BANKS ([linker generated]):
+    crt0.o                    crt0.s(14)
+NES_MAPPER ([linker generated]):
+    crt0.o                    crt0.s(14)
+NES_MIRRORING ([linker generated]):
+    crt0.o                    crt0.s(14)
+NES_PRG_BANKS ([linker generated]):
+    crt0.o                    crt0.s(14)
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__DATA_LOAD__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_RUN__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_SIZE__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__RAM_SIZE__ ([linker generated]):
+    crt0.o                    crt0.s(9)
+__RAM_START__ ([linker generated]):
+    crt0.o                    crt0.s(9)
+__STARTUP__ (crt0.o):
+    hello.o                   hello.s(20)
+__ctype (ctype.o):
+    ctypemask.o               common/ctypemask.s(23)
+__ctypeidx (ctype.o):
+    ctypemask.o               common/ctypemask.s(24)
+__directerrno (_directerrno.o):
+    vsnprintf.o               /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/errno.inc(10)
+__errno (errno.o):
+    _seterrno.o               /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/errno.inc(7)
+__hextab (_hextab.o):
+    ltoa.o                    common/ltoa.s(10)
+__longminstr (_longminstr.o):
+    ltoa.o                    common/ltoa.s(10)
+__oserror (_oserror.o):
+    _directerrno.o            /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/errno.inc(7)
+__printf (_printf.o):
+    vsnprintf.o               common/vsnprintf.s(10)
+__seterrno (_seterrno.o):
+    _directerrno.o            /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/errno.inc(9)
+_ltoa (ltoa.o):
+    _printf.o                 common/_printf.s(12)
+_main (hello.o):
+    crt0.o                    crt0.s(6)
+_memcpy (memcpy.o):
+    vsnprintf.o               common/vsnprintf.s(10)
+    vrambuf.o                 vrambuf.s(19)
+_pal_col (crt0.o):
+    hello.o                   hello.s(29)
+_ppu_on_all (crt0.o):
+    hello.o                   hello.s(30)
+_ppu_wait_frame (crt0.o):
+    vrambuf.o                 vrambuf.s(13)
+_scroll (crt0.o):
+    hello.o                   hello.s(31)
+_set_vram_update (crt0.o):
+    hello.o                   hello.s(32)
+_sprintf (sprintf.o):
+    hello.o                   hello.s(34)
+_strlen (strlen.o):
+    _printf.o                 common/_printf.s(13)
+_strlower (strlower.o):
+    _printf.o                 common/_printf.s(13)
+_ultoa (ltoa.o):
+    _printf.o                 common/_printf.s(12)
+_vrambuf_clear (vrambuf.o):
+    hello.o                   hello.s(35)
+_vrambuf_put (vrambuf.o):
+    hello.o                   hello.s(36)
+_vsprintf (vsprintf.o):
+    sprintf.o                 common/sprintf.s(8)
+addysp (addysp.o):
+    incsp6.o                  runtime/incsp6.s(8)
+    sprintf.o                 common/sprintf.s(8)
+    incsp5.o                  runtime/incsp5.s(8)
+aslax4 (aslax4.o):
+    hello.o                   hello.s(293)
+axlong (axlong.o):
+    _printf.o                 common/_printf.s(11)
+axulong (axlong.o):
+    _printf.o                 common/_printf.s(11)
+copydata (copydata.o):
+    crt0.o                    crt0.s(6)
+ctypemaskdirect (ctypemask.o):
+    strlower.o                common/strlower.s(14)
+decsp4 (decsp4.o):
+    lpush.o                   runtime/lpush.s(12)
+    sprintf.o                 common/sprintf.s(8)
+    hello.o                   hello.s(293)
+decsp6 (decsp6.o):
+    _printf.o                 common/_printf.s(11)
+incsp2 (incsp2.o):
+    vsnprintf.o               common/vsnprintf.s(9)
+    popptr1.o                 runtime/popptr1.s(8)
+incsp5 (incsp5.o):
+    vrambuf.o                 vrambuf.s(186)
+incsp6 (incsp6.o):
+    vsnprintf.o               common/vsnprintf.s(9)
+initlib (condes.o):
+    crt0.o                    crt0.s(6)
+ldaxysp (ldaxsp.o):
+    vsnprintf.o               common/vsnprintf.s(9)
+negax (negabs.o):
+    shelp.o                   runtime/shelp.s(11)
+    mod.o                     runtime/mod.s(11)
+negeax (lneg.o):
+    ltoa.o                    common/ltoa.s(9)
+popa (popa.o):
+    crt0.o                    crt0.s(6)
+popax (incsp2.o):
+    ltoa.o                    common/ltoa.s(9)
+    _printf.o                 common/_printf.s(11)
+    vsnprintf.o               common/vsnprintf.s(9)
+    shelp.o                   runtime/shelp.s(11)
+    memcpy.o                  common/memcpy.s(14)
+    crt0.o                    crt0.s(6)
+popptr1 (popptr1.o):
+    ltoa.o                    common/ltoa.s(9)
+    udiv.o                    runtime/udiv.s(9)
+    memcpy.o                  common/memcpy.s(14)
+popsargsudiv16 (shelp.o):
+    mod.o                     runtime/mod.s(11)
+ptr1 (zeropage.o):
+    strlower.o                common/strlower.s(13)
+    ltoa.o                    common/ltoa.s(11)
+    _printf.o                 /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/zeropage.inc(12)
+    vsnprintf.o               common/vsnprintf.s(11)
+    zerobss.o                 common/zerobss.s(9)
+    udiv.o                    runtime/udiv.s(10)
+    sprintf.o                 common/sprintf.s(9)
+    shelp.o                   runtime/shelp.s(12)
+    popptr1.o                 runtime/popptr1.s(9)
+    memcpy.o                  common/memcpy.s(15)
+    copydata.o                common/copydata.s(9)
+    vrambuf.o                 vrambuf.s(11)
+ptr2 (zeropage.o):
+    strlower.o                common/strlower.s(13)
+    strlen.o                  common/strlen.s(12)
+    ltoa.o                    common/ltoa.s(11)
+    _printf.o                 /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/zeropage.inc(12)
+    memcpy.o                  common/memcpy.s(15)
+    copydata.o                common/copydata.s(9)
+ptr3 (zeropage.o):
+    ltoa.o                    common/ltoa.s(11)
+    memcpy.o                  common/memcpy.s(15)
+ptr4 (zeropage.o):
+    udiv.o                    runtime/udiv.s(10)
+    shelp.o                   runtime/shelp.s(12)
+push0 (pushax.o):
+    hello.o                   hello.s(293)
+push1 (push1.o):
+    _printf.o                 common/_printf.s(11)
+pusha (pusha.o):
+    vrambuf.o                 vrambuf.s(186)
+    hello.o                   hello.s(293)
+pusha0 (pushax.o):
+    push1.o                   runtime/push1.s(8)
+    hello.o                   hello.s(293)
+pushax (pushax.o):
+    _printf.o                 common/_printf.s(11)
+    vrambuf.o                 vrambuf.s(186)
+pusheax (lpush.o):
+    _printf.o                 common/_printf.s(11)
+pushw0sp (pushwsp.o):
+    vsprintf.o                common/vsprintf.s(8)
+pushwysp (pushwsp.o):
+    vrambuf.o                 vrambuf.s(186)
+    hello.o                   hello.s(293)
+regbank (zeropage.o):
+    _printf.o                 /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/zeropage.inc(14)
+sp (zeropage.o):
+    lpush.o                   runtime/lpush.s(13)
+    ldaxsp.o                  runtime/ldaxsp.s(8)
+    decsp6.o                  runtime/decsp6.s(8)
+    _printf.o                 /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/zeropage.inc(11)
+    vsnprintf.o               common/vsnprintf.s(11)
+    staxsp.o                  runtime/staxsp.s(8)
+    addysp.o                  runtime/addysp.s(8)
+    subysp.o                  runtime/subysp.s(9)
+    sprintf.o                 common/sprintf.s(9)
+    pushwsp.o                 runtime/pushwsp.s(8)
+    pushax.o                  runtime/pushax.s(8)
+    popptr1.o                 runtime/popptr1.s(9)
+    popa.o                    runtime/popa.s(8)
+    memcpy.o                  common/memcpy.s(15)
+    incsp2.o                  runtime/incsp2.s(8)
+    decsp4.o                  runtime/decsp4.s(8)
+    pusha.o                   pusha.s(8)
+    vrambuf.o                 vrambuf.s(10)
+    crt0.o                    /opt/homebrew/Cellar/cc65/2.19/share/cc65/asminc/zeropage.inc(11)
+    hello.o                   hello.s(10)
+sreg (zeropage.o):
+    lneg.o                    runtime/lneg.s(11)
+    ltoa.o                    common/ltoa.s(11)
+    lpush.o                   runtime/lpush.s(13)
+    axlong.o                  runtime/axlong.s(9)
+    _printf.o                 /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/zeropage.inc(11)
+    udiv.o                    runtime/udiv.s(10)
+    mod.o                     runtime/mod.s(12)
+staxysp (staxsp.o):
+    vsprintf.o                common/vsprintf.s(8)
+subysp (subysp.o):
+    hello.o                   hello.s(293)
+tmp1 (zeropage.o):
+    ltoa.o                    common/ltoa.s(11)
+    _printf.o                 /Users/lmaxim/Downloads/neslib/cc65-nes-examples-fixed/cc65/asminc/zeropage.inc(13)
+    shelp.o                   runtime/shelp.s(12)
+    mod.o                     runtime/mod.s(12)
+    copydata.o                common/copydata.s(9)
+    aslax4.o                  runtime/aslax4.s(8)
+    hello.o                   hello.s(11)
+tmp2 (zeropage.o):
+    shelp.o                   runtime/shelp.s(12)
+tosmoda0 (mod.o):
+    hello.o                   hello.s(293)
+udiv16 (udiv.o):
+    shelp.o                   runtime/shelp.s(11)
+vsnprintf (vsnprintf.o):
+    vsprintf.o                common/vsprintf.s(9)
+zerobss (zerobss.o):
+    crt0.o                    crt0.s(6)
+

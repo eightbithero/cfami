@@ -1,0 +1,1 @@
+#pragma rodata-name("CODE1")

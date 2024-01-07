@@ -1,0 +1,248 @@
+Modules list:
+-------------
+hello.o:
+    CODE              Offs=000000  Size=000043  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=00000E  Align=00001  Fill=0000
+crt0.o:
+    RODATA            Offs=00000E  Size=001304  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000029  Align=00001  Fill=0000
+    HEADER            Offs=000000  Size=000010  Align=00001  Fill=0000
+    STARTUP           Offs=000000  Size=000CCB  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+    CHARS             Offs=000000  Size=001000  Align=00001  Fill=0000
+vrambuf.o:
+    CODE              Offs=000043  Size=0000F9  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000001  Align=00001  Fill=0000
+chr_generic.o:
+    CHARS             Offs=001000  Size=001000  Align=00001  Fill=0000
+nes.lib(add.o):
+    CODE              Offs=00013C  Size=00001C  Align=00001  Fill=0000
+nes.lib(addysp.o):
+    CODE              Offs=000158  Size=00000E  Align=00001  Fill=0000
+nes.lib(condes.o):
+    CODE              Offs=000166  Size=00000C  Align=00001  Fill=0000
+    DATA              Offs=000001  Size=000025  Align=00001  Fill=0000
+    ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
+nes.lib(copydata.o):
+    CODE              Offs=000172  Size=00002D  Align=00001  Fill=0000
+nes.lib(icmp.o):
+    CODE              Offs=00019F  Size=00002E  Align=00001  Fill=0000
+nes.lib(incsp2.o):
+    CODE              Offs=0001CD  Size=000016  Align=00001  Fill=0000
+nes.lib(incsp5.o):
+    CODE              Offs=0001E3  Size=000005  Align=00001  Fill=0000
+nes.lib(ldaxsp.o):
+    CODE              Offs=0001E8  Size=000009  Align=00001  Fill=0000
+nes.lib(makebool.o):
+    CODE              Offs=0001F1  Size=00002C  Align=00001  Fill=0000
+nes.lib(popa.o):
+    CODE              Offs=00021D  Size=00000C  Align=00001  Fill=0000
+nes.lib(pusha.o):
+    CODE              Offs=000229  Size=000016  Align=00001  Fill=0000
+nes.lib(pushax.o):
+    CODE              Offs=00023F  Size=00001A  Align=00001  Fill=0000
+nes.lib(return0.o):
+    CODE              Offs=000259  Size=000004  Align=00001  Fill=0000
+nes.lib(staspidx.o):
+    CODE              Offs=00025D  Size=000016  Align=00001  Fill=0000
+nes.lib(sub.o):
+    CODE              Offs=000273  Size=000015  Align=00001  Fill=0000
+nes.lib(ult.o):
+    CODE              Offs=000288  Size=000008  Align=00001  Fill=0000
+nes.lib(zerobss.o):
+    CODE              Offs=000290  Size=000023  Align=00001  Fill=0000
+nes.lib(zeropage.o):
+    ZEROPAGE          Offs=000029  Size=00001A  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CHARS                 000000  001FFF  002000  00001
+HEADER                000000  00000F  000010  00001
+ZEROPAGE              000000  000042  000043  00001
+DATA                  000300  000325  000026  00001
+STARTUP               00C000  00CCCA  000CCB  00001
+CODE                  00CCCB  00CF7D  0002B3  00001
+RODATA                00CF7E  00E28F  001312  00001
+ONCE                  00E2B6  00E2C1  00000C  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+NES_CHR_BANKS             000001 REA    NES_MAPPER                000000 REA    
+NES_MIRRORING             000001 REA    NES_PRG_BANKS             000001 REA    
+__BSS_RUN__               000326 RLA    __BSS_SIZE__              000000 REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00CCCB RLA    
+__DATA_LOAD__             00E290 RLA    __DATA_RUN__              000300 RLA    
+__DATA_SIZE__             000026 REA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      00E290 RLA    __DMC_START__             00FFC0 RLA    
+__RAM_SIZE__              000500 REA    __RAM_START__             000300 RLA    
+__STARTUP__               000001 REA    _main                     00CCCB RLA    
+_memcpy                   00C585 RLA    _pal_col                  00C234 RLA    
+_ppu_on_all               00C27F RLA    _ppu_wait_frame           00C339 RLA    
+_vram_adr                 00C544 RLA    _vram_write               00C43A RLA    
+addysp                    00CE24 RLA    addysp1                   00CE23 RLA    
+boolult                   00CEDB RLA    copydata                  00CE3D RLA    
+incsp2                    00CEA0 RLA    incsp5                    00CEAE RLA    
+initlib                   00E2B6 RLA    ldaxysp                   00CEB5 RLA    
+popa                      00CEE8 RLA    popax                     00CE98 RLA    
+ptr1                      000031 RLZ    ptr2                      000033 RLZ    
+pusha                     00CEF8 RLA    pushax                    00CF0E RLA    
+return0                   00CF24 RLA    sp                        000029 RLZ    
+sreg                      00002B RLZ    staspidx                  00CF28 RLA    
+tmp1                      000039 RLZ    tosaddax                  00CE09 RLA    
+tosicmp                   00CE6C RLA    tossubax                  00CF40 RLA    
+tosultax                  00CF55 RLA    zerobss                   00CF5B RLA    
+
+
+
+Exports list by value:
+----------------------
+__CONSTRUCTOR_COUNT__     000000 REA    __BSS_SIZE__              000000 REA    
+__DESTRUCTOR_COUNT__      000000 REA    NES_MAPPER                000000 REA    
+NES_MIRRORING             000001 REA    NES_PRG_BANKS             000001 REA    
+__STARTUP__               000001 REA    NES_CHR_BANKS             000001 REA    
+__DATA_SIZE__             000026 REA    sp                        000029 RLZ    
+sreg                      00002B RLZ    ptr1                      000031 RLZ    
+ptr2                      000033 RLZ    tmp1                      000039 RLZ    
+__RAM_START__             000300 RLA    __DATA_RUN__              000300 RLA    
+__BSS_RUN__               000326 RLA    __RAM_SIZE__              000500 REA    
+_pal_col                  00C234 RLA    _ppu_on_all               00C27F RLA    
+_ppu_wait_frame           00C339 RLA    _vram_write               00C43A RLA    
+_vram_adr                 00C544 RLA    _memcpy                   00C585 RLA    
+__CONSTRUCTOR_TABLE__     00CCCB RLA    _main                     00CCCB RLA    
+tosaddax                  00CE09 RLA    addysp1                   00CE23 RLA    
+addysp                    00CE24 RLA    copydata                  00CE3D RLA    
+tosicmp                   00CE6C RLA    popax                     00CE98 RLA    
+incsp2                    00CEA0 RLA    incsp5                    00CEAE RLA    
+ldaxysp                   00CEB5 RLA    boolult                   00CEDB RLA    
+popa                      00CEE8 RLA    pusha                     00CEF8 RLA    
+pushax                    00CF0E RLA    return0                   00CF24 RLA    
+staspidx                  00CF28 RLA    tossubax                  00CF40 RLA    
+tosultax                  00CF55 RLA    zerobss                   00CF5B RLA    
+__DATA_LOAD__             00E290 RLA    __DESTRUCTOR_TABLE__      00E290 RLA    
+initlib                   00E2B6 RLA    __DMC_START__             00FFC0 RLA    
+
+
+
+Imports list:
+-------------
+NES_CHR_BANKS ([linker generated]):
+    crt0.o                    crt0.s(27)
+NES_MAPPER ([linker generated]):
+    crt0.o                    crt0.s(27)
+NES_MIRRORING ([linker generated]):
+    crt0.o                    crt0.s(27)
+NES_PRG_BANKS ([linker generated]):
+    crt0.o                    crt0.s(27)
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__DATA_LOAD__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_RUN__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_SIZE__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__DMC_START__ ([linker generated]):
+    crt0.o                    crt0.s(26)
+__RAM_SIZE__ ([linker generated]):
+    crt0.o                    crt0.s(21)
+__RAM_START__ ([linker generated]):
+    crt0.o                    crt0.s(21)
+__STARTUP__ (crt0.o):
+    hello.o                   hello.s(13)
+_main (hello.o):
+    crt0.o                    crt0.s(18)
+_memcpy (crt0.o):
+    vrambuf.o                 vrambuf.s(19)
+_pal_col (crt0.o):
+    hello.o                   hello.s(14)
+_ppu_on_all (crt0.o):
+    hello.o                   hello.s(15)
+_ppu_wait_frame (crt0.o):
+    vrambuf.o                 vrambuf.s(13)
+_vram_adr (crt0.o):
+    hello.o                   hello.s(16)
+_vram_write (crt0.o):
+    hello.o                   hello.s(17)
+addysp (addysp.o):
+    incsp5.o                  runtime/incsp5.s(8)
+addysp1 (addysp.o):
+    sub.o                     runtime/sub.s(8)
+boolult (makebool.o):
+    ult.o                     runtime/ult.s(8)
+copydata (copydata.o):
+    crt0.o                    crt0.s(18)
+incsp2 (incsp2.o):
+    staspidx.o                runtime/staspidx.s(8)
+incsp5 (incsp5.o):
+    vrambuf.o                 vrambuf.s(186)
+initlib (condes.o):
+    crt0.o                    crt0.s(18)
+ldaxysp (ldaxsp.o):
+    vrambuf.o                 vrambuf.s(186)
+popa (popa.o):
+    crt0.o                    crt0.s(18)
+popax (incsp2.o):
+    crt0.o                    crt0.s(18)
+ptr1 (zeropage.o):
+    zerobss.o                 common/zerobss.s(9)
+    staspidx.o                runtime/staspidx.s(9)
+    copydata.o                common/copydata.s(9)
+ptr2 (zeropage.o):
+    copydata.o                common/copydata.s(9)
+pusha (pusha.o):
+    vrambuf.o                 vrambuf.s(186)
+    hello.o                   hello.s(88)
+pushax (pushax.o):
+    vrambuf.o                 vrambuf.s(186)
+    vrambuf.o                 vrambuf.s(186)
+    hello.o                   hello.s(88)
+return0 (return0.o):
+    ult.o                     runtime/ult.s(8)
+sp (zeropage.o):
+    icmp.o                    runtime/icmp.s(9)
+    addysp.o                  runtime/addysp.s(8)
+    sub.o                     runtime/sub.s(9)
+    staspidx.o                runtime/staspidx.s(9)
+    pushax.o                  runtime/pushax.s(8)
+    pusha.o                   runtime/pusha.s(8)
+    popa.o                    runtime/popa.s(8)
+    ldaxsp.o                  runtime/ldaxsp.s(8)
+    incsp2.o                  runtime/incsp2.s(8)
+    add.o                     runtime/add.s(12)
+    vrambuf.o                 vrambuf.s(10)
+    crt0.o                    /opt/homebrew/Cellar/cc65/2.19/share/cc65/asminc/zeropage.inc(11)
+sreg (zeropage.o):
+    icmp.o                    runtime/icmp.s(9)
+staspidx (staspidx.o):
+    vrambuf.o                 vrambuf.s(186)
+    vrambuf.o                 vrambuf.s(186)
+tmp1 (zeropage.o):
+    staspidx.o                runtime/staspidx.s(9)
+    copydata.o                common/copydata.s(9)
+    add.o                     runtime/add.s(12)
+tosaddax (add.o):
+    vrambuf.o                 vrambuf.s(186)
+tosicmp (icmp.o):
+    ult.o                     runtime/ult.s(8)
+tossubax (sub.o):
+    vrambuf.o                 vrambuf.s(186)
+tosultax (ult.o):
+    vrambuf.o                 vrambuf.s(186)
+zerobss (zerobss.o):
+    crt0.o                    crt0.s(18)
+

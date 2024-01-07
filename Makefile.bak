@@ -1,0 +1,100 @@
+
+
+# Source files
+C_SOURCES = $(wildcard source/*.c)
+ASM_SOURCES = $(wildcard source/*.asm source/*.s)
+
+# Object files
+C_OBJECTS = $(C_SOURCES:.c=.o)
+ASM_OBJECTS = $(ASM_SOURCES:.asm=.o) $(ASM_SOURCES:.s=.o)
+
+# Output
+ROM = build/debug/game.nes
+
+# Build rules
+# Сборка основного ROM файла из объектных файлов C и ASM
+# Линковка объектных файлов в один ROM файл
+$(ROM): $(C_OBJECTS) $(ASM_OBJECTS)
+	$(LD) -o $@ $^ 
+
+# Правило для компиляции .c файлов в .o объектные файлы
+# Компиляция C исходного файла в объектный файл
+%.o: %.c
+	$(CC) -o $@ $< 
+
+# Правило для ассемблирования .asm файлов в .o объектные файлы
+# Ассемблирование ASM исходного файла в объектный файл
+%.o: %.s
+	$(AS) -o $@ $< 
+
+# Псевдоцели для управления процессом сборки
+.PHONY: all clean
+
+# Цель all для сборки основного ROM файла
+all: $(ROM)
+
+# Цель clean для очистки проекта от объектных файлов и ROM
+# Удаление сгенерированных файлов
+clean:
+	rm -f $(C_OBJECTS) $(ASM_OBJECTS) $(ROM) 
+
+
+
+
+CC = cc65
+AS = ca65
+LD = ld65
+
+TARGETS := example1.nes
+
+EMULATOR ?= higan
+
+EXAMPLES := $(TARGETS:..nes=)
+OBJECTS := $(TARGETS:.nes=.o)
+ASSEMBLY_SOURCES := $(TARGETS:.nes=.s)
+C_SOURCES := $(TARGETS:.nes=.c)
+
+.PHONY: all
+
+# Disable builtin rules (for .c, .o) by providing an empty .SUFFIXES rule
+# Yes. GNU make is a rat's nest
+.SUFFIXES:
+
+# Make sure intermediate files are *NOT* deleted
+# Yes. GNU make is a rat's nest
+.PRECIOUS: %.s %.o %.asm
+
+all: $(CC) $(TARGETS)
+
+# submodule build
+$(CC):
+	cd $(CC65_DIR) && $(MAKE)
+
+%: %.nes
+	$(EMULATOR) $<
+
+clean:
+	@rm -fv $(TARGETS)
+	@rm -fv $(OBJECTS)
+	@rm -fv $(ASSEMBLY_SOURCES)
+	@rm -fv crt0.o
+
+%.s: %.c
+	$(CC) -Oi $< --target nes -I$(CC65_DIR)/include/ --add-source
+
+%.o: %.s
+	$(CA) $<
+
+%.nes: %.o crt0.o
+	$(LD) -C nrom_128_horz.cfg -o $@ $^ nes.lib
+
+
+# cc65 -Oi source/*.c --target nes -I source/ --add-source
+# Какую оптимизацию использовать для nes ?
+
+# /opt/homebrew/bin/cc65 -Oi example1.c --target nes -I/opt/homebrew/include/ --add-source
+# /opt/homebrew/bin/ca65 example1.s
+# /opt/homebrew/bin/ca65 crt0.s
+# /opt/homebrew/bin/ld65 -C nrom_128_horz.cfg -o example1.nes example1.o crt0.o nes.lib
+
+

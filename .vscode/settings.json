@@ -1,0 +1,5 @@
+{
+    "cmake.configureOnOpen": true,
+    "editor.defaultFoldingRangeProvider": "GitHub.copilot",
+    "editor.defaultFormatter": "GitHub.copilot"
+}
